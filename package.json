@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "ember build",
+    "build": "cp node_modules/tachyons/css/tachyons.css vendor/tachyons.css && ember build",
     "start": "ember server",
     "test": "ember try:testall"
   },
@@ -36,13 +36,15 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.2.2",
-    "loader.js": "^4.0.1"
+    "loader.js": "^4.0.1",
+    "tachyons-cli": "^0.6.0"
   },
   "keywords": [
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "tachyons": "^4.0.0-beta.18"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

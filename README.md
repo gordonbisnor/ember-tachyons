@@ -1,4 +1,4 @@
-# ember-[tachyons](http://tachyons.io)
+# ember-[tachyons](http://tachyons.io) [![Build Status](https://travis-ci.org/johnotander/ember-tachyons.svg?branch=master)](https://travis-ci.org/johnotander/ember-tachyons)
 
 __Work in progress__
 

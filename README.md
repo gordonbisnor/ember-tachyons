@@ -77,8 +77,30 @@ Values: `[1,2,3,4,5,6,'subheadline','headline']`
 
 Values: `[1,2,3,4,5,6,7,8,9,'normal','bold']`
 
+###### Examples
+
+```hbs
+{{#t-header fontWeight='normal' fontWeight-m=6 fontWeight-l='bold'}}
+...
+{{/t-header}}
+```
+
+```hbs
+{{#t-profile-card fontWeight=4 fontWeight-ns=3}}
+...
+{{/t-profile-card}}
+```
+
 ##### Opacity
 
 - `opacity`: Opacity for a component, in 10% increments.
 
 Values: `[10,20,30,40,50,60,70,80,90,100]`
+
+###### Examples
+
+```hbs
+{{#t-header opacity='80' fontWeight-m=100}}
+...
+{{/t-header}}
+```

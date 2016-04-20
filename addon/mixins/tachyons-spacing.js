@@ -71,16 +71,33 @@ export default Ember.Mixin.create({
 
         const mq = spacingAttr.split('-')[1];
         if (isKnownSpacingValue(val)) {
-          cx.push(getSpacingClass(spacingAttr, val, mq);
+          cx.push(getSpacingClass(spacingAttr, val, mq));
         }
-      })
+      });
 
       return cx.join(' ');
-    }
+    })
 });
 
-function getSpacingClass(marginOrPadding, value, mq) {
-  
+function getSpacingClass(marginOrPaddingAttr, value, mq) {
+  let klass = /^margin/.test(marginOrPaddingAttr) ? 'm' : 'p';
+
+  // Remove the margin/padding prefix and media query
+  const position = marginOrPaddingAttr.replace(/(margin|padding)/, '').split('-')[0];
+
+  if (Ember.isBlank(position)) {
+    klass += 'a';
+  } else {
+    klass += position.charAt(0).toLowerCase();
+  }
+
+  klass += value;
+
+  if (Ember.isPresent(mq)) {
+    klass += '-' + mq;
+  }
+
+  return klass;
 }
 
 function isKnownSpacingValue(value) {

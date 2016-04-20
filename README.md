@@ -13,13 +13,20 @@ ember install ember-tachyons
 ## Usage
 
 ```hbs
-{{#t-profile-card}}
-	{{#t-profile-card-title}}
-		{{user.name}}
-  {{/t-profile-card-title}}
-	{{#t-profile-card-description fontSize=2 fontSize-l=1 fontWeight='bold'}}
-		{{user.description}}
-  {{/t-profile-card-description}}
-{{/t-profile-card}}
+{{#t-header class="bb b--black-10 cf"}}
+  {{#t-header-nav class="fl"}}
+    {{#t-header-nav-item}}
+      {{link-to 'ember-tachyons' class="link dim black"}}
+    {{/t-header-nav-item}}
+  {{/t-header-nav}}
+  {{#t-header-nav class="fr tr"}}
+    {{#t-header-nav-item}}
+      {{link-to 'docs' class="link dim black"}}
+    {{/t-header-nav-item}}
+    {{#t-header-nav-item}}
+      <a href="https://github.com/johnotander/ember-tachyons" class="link dim black">github</a>
+    {{/t-header-nav-item}}
+  {{/t-header-nav}}
+{{/t-header}}
 ```
 

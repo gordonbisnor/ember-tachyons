@@ -46,21 +46,33 @@ Values: `[0,1,2,3,4,5,6]`
 
 ##### Margin
 
-- `m`: Margin for top, left, right, bottom, and middle.
-- `mt`: Margin top.
-- `ml`: Margin left.
-- `mr`: Margin right.
-- `mb`: Margin bottom.
-- `mv`: Margin vertical (top and bottom).
-- `mh`: Margin horizontal (left and right).
+- `margin`: Margin for top, left, right, bottom, and middle.
+- `marginTop`: Margin top.
+- `marginLeft`: Margin left.
+- `marginRight`: Margin right.
+- `marginBottom`: Margin bottom.
 
 Values: `[0,1,2,3,4,5,6]`
 
 ##### Font Size
 
-- `f`: Font size, 1 is the largest on the scale, 6 the smallest.
+- `fontSize`: Font size, 1 is the largest on the scale, 6 the smallest.
 
 Values: `[1,2,3,4,5,6]`
+
+###### Examples
+
+```hbs
+{{#t-header fontSize=2 fontSize-m=1 fontSize-l='subheadline'}}
+...
+{{/t-header}}
+```
+
+```hbs
+{{#t-profile-card fontSize=4 fontSize-ns=3}}
+...
+{{/t-profile-card}}
+```
 
 ##### Font Weight
 

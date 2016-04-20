@@ -1,30 +1,44 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  f: null,
-  fNs: null,
-  fM: null,
-  fL: null,
+  fontSize: null,
+  'fontSize-ns': null,
+  'fontSize-m': null,
+  'fontSize-l': null,
 
   classNameBindings: [
-    'fontSize'
+    'fontSizeCx'
   ],
 
-  fontSize: Ember.computed('f', 'fNs', function() {
-    const f = this.get('f');
-    const fNs = this.get('fNs');
-
+  fontSizeCx: Ember.computed('fontSize', 'fontSize-ns', 'fontSize-m', 'fontSize-l', function() {
     const cx = [];
 
-    if (Ember.isPresent(f)) {
-      cx.push('f' + f);
-    }
+    const f = this.get('fontSize');
+    const fNs = this.get('fontSize-ns');
+    const fM = this.get('fontSize-m');
+    const fL = this.get('fontSize-l');
 
-    if (Ember.isPresent(fNs)) {
-      cx.push('f' + fNs + '-ns');
-    }
+    // TODO: Validate the values, log error if unknown parameter (like 7)
+    if (Ember.isPresent(f) && isKnownFontValue(f)) { cx.push('f' + f); }
+    if (Ember.isPresent(fNs) && isKnownFontValue(fNs)) { cx.push('f' + fNs + '-ns'); }
+    if (Ember.isPresent(fM) && isKnownFontValue(fM)) { cx.push('f' + fM + '-m'); }
+    if (Ember.isPresent(fL) && isKnownFontValue(fL)) { cx.push('f' + fL + '-l'); }
 
     return cx.join(' ');
   })
 });
 
+function isKnownFontValue (value) {
+  const knownValues = {
+    1: true,
+    2: true,
+    3: true,
+    4: true,
+    5: true,
+    6: true,
+    headline: true,
+    subheadline: true
+  };
+
+  return Ember.isPresent(value) && knownValues[value];
+}

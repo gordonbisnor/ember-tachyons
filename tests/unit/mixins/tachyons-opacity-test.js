@@ -4,9 +4,20 @@ import { module, test } from 'qunit';
 
 module('Unit | Mixin | tachyons opacity');
 
-// Replace this with your real tests.
-test('it works', function(assert) {
+test('binds attrs to classes', function(assert) {
   let TachyonsOpacityObject = Ember.Object.extend(TachyonsOpacityMixin);
   let subject = TachyonsOpacityObject.create();
-  assert.ok(subject);
+
+  subject.set('opacity', 10);
+  subject.set('opacity-m', '90');
+
+  assert.equal(subject.get('opacityCx'), 'o-10 o-90-m');
+});
+
+test('ignores unkown values', function(assert) {
+  let TachyonsOpacityObject = Ember.Object.extend(TachyonsOpacityMixin);
+  let subject = TachyonsOpacityObject.create();
+
+  subject.set('opacity', 101);
+  assert.equal(subject.get('opacityCx'), '');
 });

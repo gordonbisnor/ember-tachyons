@@ -15,13 +15,13 @@ ember install ember-tachyons
 #### Header
 
 ```hbs
-{{#t-header class="bb b--black-10 cf"}}
+{{#t-header}}
   {{#t-header-nav class="fl"}}
     {{#t-header-nav-item}}
       {{link-to 'ember-tachyons' class="link dim black"}}
     {{/t-header-nav-item}}
   {{/t-header-nav}}
-  {{#t-header-nav class="fr tr"}}
+  {{#t-header-nav-right class="fr tr"}}
     {{#t-header-nav-item}}
       {{link-to 'docs' class="link dim black"}}
     {{/t-header-nav-item}}
@@ -37,7 +37,7 @@ ember install ember-tachyons
 ##### t-card
 
 ```hbs
-{{#t-card class="pa3 pa4-ns mw6 ma3 center"}}
+{{#t-card}}
   <h3 class="ma0 pa0">Hello, I'm a <code class="o-80">t-card</code></h3>
   <p class="f6 f5-ns lh-copy measure">
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/t-card';
+import layout from '../templates/components/t-profile-card';
 
 export default Ember.Component.extend({
   classNames: [

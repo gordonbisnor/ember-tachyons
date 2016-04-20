@@ -17,7 +17,7 @@ ember install ember-tachyons
 	{{#t-profile-card-title}}
 		{{user.name}}
   {{/t-profile-card-title}}
-	{{#t-profile-card-description f=2 fw='bold'}}
+	{{#t-profile-card-description fontSize=2 fontSize-l=1 fontWeight='bold'}}
 		{{user.description}}
   {{/t-profile-card-description}}
 {{/t-profile-card}}
@@ -25,7 +25,6 @@ ember install ember-tachyons
 
 #### Breakpoints
 
-- `all`: All breakpoints (unless otherwise specified with another breakpoint)
 - `ns`: Not small
 - `m`: Medium
 - `l`: Large
@@ -34,13 +33,11 @@ ember install ember-tachyons
 
 ##### Padding
 
-- `p`: Padding for top, left, right, bottom, and middle.
-- `pt`: Padding top.
-- `pl`: Padding left.
-- `pr`: Padding right.
-- `pb`: Padding bottom.
-- `pv`: Padding vertical (top and bottom).
-- `ph`: Padding horizontal (left and right).
+- `padding`: Padding for top, left, right, bottom, and middle.
+- `paddingTop`: Padding top.
+- `paddingLeft`: Padding left.
+- `paddingRight`: Padding right.
+- `paddingBottom`: Padding bottom.
 
 Values: `[0,1,2,3,4,5,6]`
 
@@ -76,13 +73,12 @@ Values: `[1,2,3,4,5,6,'subheadline','headline']`
 
 ##### Font Weight
 
-- `fw`: Font size, 1 is the thinnest on the scale, 9 the boldest.
+- `fontWeight`: Font size, 1 is the thinnest on the scale, 9 the boldest.
 
-Values: `[1,2,3,4,5,6,7,8,9]`
+Values: `[1,2,3,4,5,6,7,8,9,'normal','bold']`
 
 ##### Opacity
 
-- `o`: Opacity for a component, in 10% increments.
+- `opacity`: Opacity for a component, in 10% increments.
 
-Values: `[10,20,30,40,50,60,70,80,90,100]
-
+Values: `[10,20,30,40,50,60,70,80,90,100]`

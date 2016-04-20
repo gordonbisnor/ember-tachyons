@@ -58,7 +58,7 @@ Values: `[0,1,2,3,4,5,6]`
 
 - `fontSize`: Font size, 1 is the largest on the scale, 6 the smallest.
 
-Values: `[1,2,3,4,5,6,'subheadline', 'headline']`
+Values: `[1,2,3,4,5,6,'subheadline','headline']`
 
 ###### Examples
 

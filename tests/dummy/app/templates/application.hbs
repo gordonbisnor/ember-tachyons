@@ -1,5 +1,17 @@
-{{#t-header paddingBottom=5 paddingTop=4 class="bg-black-10"}}
-  ember-tachyons
+{{#t-header class="bb b--black-10 cf"}}
+  {{#t-header-nav class="fl"}}
+    {{#t-header-nav-item}}
+      {{link-to 'ember-tachyons' class="link dim black"}}
+    {{/t-header-nav-item}}
+  {{/t-header-nav}}
+  {{#t-header-nav class="fr tr"}}
+    {{#t-header-nav-item}}
+      {{link-to 'docs' class="link dim black"}}
+    {{/t-header-nav-item}}
+    {{#t-header-nav-item}}
+      <a href="https://github.com/johnotander/ember-tachyons" class="link dim black">github</a>
+    {{/t-header-nav-item}}
+  {{/t-header-nav}}
 {{/t-header}}
 
 {{outlet}}

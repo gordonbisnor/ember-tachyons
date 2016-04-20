@@ -73,7 +73,8 @@ export default Ember.Mixin.create({
         if (isKnownSpacingValue(val)) {
           cx.push(getSpacingClass(spacingAttr, val, mq));
         } else {
-          const defaultVal = this.get('defaultSpacing')[spacingAttr];
+          const defaults = this.get('defaultSpacing');
+          const defaultVal = defaults && defaults[spacingAttr];
 
           if (isKnownSpacingValue(defaultVal)) {
             cx.push(getSpacingClass(spacingAttr, defaultVal, mq));

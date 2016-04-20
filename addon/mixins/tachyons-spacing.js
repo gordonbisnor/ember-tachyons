@@ -72,6 +72,12 @@ export default Ember.Mixin.create({
         const mq = spacingAttr.split('-')[1];
         if (isKnownSpacingValue(val)) {
           cx.push(getSpacingClass(spacingAttr, val, mq));
+        } else {
+          const defaultVal = this.get('defaultSpacing')[spacingAttr];
+
+          if (isKnownSpacingValue(defaultVal)) {
+            cx.push(getSpacingClass(spacingAttr, defaultVal, mq));
+          }
         }
       });
 

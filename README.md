@@ -12,6 +12,8 @@ ember install ember-tachyons
 
 ## Usage
 
+#### Header
+
 ```hbs
 {{#t-header class="bb b--black-10 cf"}}
   {{#t-header-nav class="fl"}}
@@ -30,3 +32,17 @@ ember install ember-tachyons
 {{/t-header}}
 ```
 
+#### Cards
+
+##### t-card
+
+```hbs
+{{#t-card class="pa3 pa4-ns mw6 ma3 center"}}
+  <h3 class="ma0 pa0">Hello, I'm a <code class="o-80">t-card</code></h3>
+  <p class="f6 f5-ns lh-copy measure">
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+    vero eos et accusam et justo duo dolores et ea rebum.
+  </p>
+{{/t-card}}
+```

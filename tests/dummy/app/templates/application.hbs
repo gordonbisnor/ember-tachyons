@@ -49,4 +49,23 @@
     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
   {{/t-profile-card-description}}
 {{/t-profile-card}}
+
+{{#t-flag-object class="mw7 center"}}
+  {{#t-flag-object-image}}
+    <img src="http://tachyons.io/img/super-wide.jpg" alt="A bright blue sky" class="mw5" />
+  {{/t-flag-object-image}}
+  {{#t-flag-object-body}}
+    This text is vertically aligned middle, no matter what the height of the image is.
+  {{/t-flag-object-body}}
+{{/t-flag-object}}
+
+{{#t-flag-object class="mw7 center"}}
+  {{#t-flag-object-body}}
+    This text is vertically aligned middle, no matter what the height of the image is.
+  {{/t-flag-object-body}}
+  {{#t-flag-object-image}}
+    <img src="http://tachyons.io/img/super-wide.jpg" alt="A bright blue sky" class="mw5" />
+  {{/t-flag-object-image}}
+{{/t-flag-object}}
+
 {{outlet}}

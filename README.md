@@ -4,45 +4,28 @@ __Work in progress__
 
 A 100% mobile-first, responsive UI library for building ambitious Ember applications.
 
+This includes the Tachyons CSS library into your Ember app.
+There will be other addons for individual tachyons components (coming soon).
+
+TODO:
+
+- Use the Sass/variable version
+- Add docs for components and how to install them
+
 ## Installation
 
 ```sh
 ember install ember-tachyons
 ```
 
-## Usage
+## License
 
-#### Header
+MIT
 
-```hbs
-{{#t-header}}
-  {{#t-header-nav class="fl"}}
-    {{#t-header-nav-item}}
-      {{link-to 'ember-tachyons' class="link dim black"}}
-    {{/t-header-nav-item}}
-  {{/t-header-nav}}
-  {{#t-header-nav-right class="fr tr"}}
-    {{#t-header-nav-item}}
-      {{link-to 'docs' class="link dim black"}}
-    {{/t-header-nav-item}}
-    {{#t-header-nav-item}}
-      <a href="https://github.com/johnotander/ember-tachyons" class="link dim black">github</a>
-    {{/t-header-nav-item}}
-  {{/t-header-nav}}
-{{/t-header}}
-```
+## Contributing
 
-#### Cards
-
-##### t-card
-
-```hbs
-{{#t-card}}
-  <h3 class="ma0 pa0">Hello, I'm a <code class="o-80">t-card</code></h3>
-  <p class="f6 f5-ns lh-copy measure">
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum.
-  </p>
-{{/t-card}}
-```
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
